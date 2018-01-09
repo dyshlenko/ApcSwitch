@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Example of use ApcSwitch class</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<pre>
+Oct 15 00:29:30  [info] Run main code.
+Oct 15 00:30:05  [debug] Ssh2Connector::__construct: Connection to xxx.xxx.xxx.xxx:22 established.
+Oct 15 00:30:06  [debug] Ssh2Connector::login: user username logged in.
+Oct 15 00:30:06  [debug] Shell::eol: End of line setted to "\r"
+Oct 15 00:30:06  [debug] ApcSwitch::__construct: Shell connected.
+Oct 15 00:30:06  [debug] ApcSwitch::__construct: Versions prepared.
+Oct 15 00:30:06  [debug] ApcSwitch::__construct: Parameters prepared.
+Oct 15 00:30:06  [debug] ApcSwitch::__construct: Menu prepared. array (
+  'Device Manager' => 1,
+  'Network' => 2,
+  'System' => 3,
+  'Logout' => 4,
+)
+
+Main info = array(11) {
+  ["Network Management Card AOS"]=>
+  string(6) "v3.7.4"
+  ["Rack PDU APP"]=>
+  string(6) "v3.7.4"
+  ["Name"]=>
+  string(7) "RackPDU"
+  ["Date"]=>
+  string(10) "10/14/2017"
+  ["Contact"]=>
+  string(7) "Unknown"
+  ["Time"]=>
+  string(8) "16:30:04"
+  ["Location"]=>
+  string(7) "Unknown"
+  ["User"]=>
+  string(11) "Outlet User"
+  ["Up Time"]=>
+  string(25) "0 Days 0 Hours 43 Minutes"
+  ["Stat"]=>
+  string(8) "P+ N+ A+"
+  ["Switched Rack PDU"]=>
+  string(25) "Communication Established"
+}
+Oct 15 00:30:07  [debug] ApcSwitch::getBanksInfo: Bank Monitor data loaded successfully.
+
+Banks info = array(3) {
+  [1]=>
+  array(6) {
+    ["Restrictions"]=>
+    string(4) "None"
+    ["Load"]=>
+    string(3) "4.1"
+    ["Low"]=>
+    string(1) "0"
+    ["NearOver"]=>
+    string(2) "16"
+    ["Over"]=>
+    string(2) "20"
+    ["State"]=>
+    string(11) "Normal Load"
+  }
+  [2]=>
+  array(6) {
+    ["Restrictions"]=>
+    string(4) "None"
+    ["Load"]=>
+    string(3) "2.9"
+    ["Low"]=>
+    string(1) "0"
+    ["NearOver"]=>
+    string(2) "16"
+    ["Over"]=>
+    string(2) "20"
+    ["State"]=>
+    string(11) "Normal Load"
+  }
+  ["Total"]=>
+  array(6) {
+    ["Restrictions"]=>
+    string(4) "None"
+    ["Load"]=>
+    string(3) "7.2"
+    ["Low"]=>
+    string(1) "0"
+    ["NearOver"]=>
+    string(2) "18"
+    ["Over"]=>
+    string(2) "24"
+    ["State"]=>
+    string(11) "Normal Load"
+  }
+}
+
+Outlets list = Oct 15 00:30:08  [debug] ApcSwitch::getIds: pair 'Server 1-A   OFF' => 1
+Oct 15 00:30:08  [debug] ApcSwitch::getIds: ID 'Server 1-A' => state 'OFF'
+Oct 15 00:30:08  [debug] ApcSwitch::getIds: pair 'Server 2-A        ON' => 2
+Oct 15 00:30:08  [debug] ApcSwitch::getIds: ID 'Server 2-A' => state 'ON'
+Oct 15 00:30:08  [debug] ApcSwitch::getIds: pair 'ALL Accessible Outlets' => 3
+Oct 15 00:30:08  [debug] ApcSwitch::getIds: ID 'ALL Accessible Outlets' => state NULL
+array(3) {
+  [1]=>
+  string(22) "Server 1-A"
+  [2]=>
+  string(17) "Server 2-A"
+  [3]=>
+  string(22) "ALL Accessible Outlets"
+}
+
+Outlet info = Oct 15 00:30:10  [debug] ApcSwitch::outletOperation: Operation "nothing".
+array(4) {
+  ["State"]=>
+  string(3) "OFF"
+  ["Name"]=>
+  string(22) "Server 1-A"
+  ["Outlet"]=>
+  string(1) "7"
+  ["Bank"]=>
+  string(1) "1"
+}
+
+Turn ON Outlet.
+Oct 15 00:30:13  [debug] ApcSwitch::outletOperation: Operation "Immediate On".
+Oct 15 00:30:13  [debug] ApcSwitch::outletOperation: Operation "Immediate On" complette.
+
+Outlet info = Oct 15 00:30:16  [debug] ApcSwitch::outletOperation: Operation "nothing".
+array(4) {
+  ["State"]=>
+  string(2) "ON"
+  ["Name"]=>
+  string(22) "Server 1-A"
+  ["Outlet"]=>
+  string(1) "7"
+  ["Bank"]=>
+  string(1) "1"
+}
+
+Turn OFF Outlet.
+Oct 15 00:30:21  [debug] ApcSwitch::outletOperation: Operation "Immediate Off".
+Oct 15 00:30:22  [debug] ApcSwitch::outletOperation: Operation "Immediate Off" complette.
+
+Outlet info = Oct 15 00:30:24  [debug] ApcSwitch::outletOperation: Operation "nothing".
+array(4) {
+  ["State"]=>
+  string(3) "OFF"
+  ["Name"]=>
+  string(22) "Server 1-A"
+  ["Outlet"]=>
+  string(1) "7"
+  ["Bank"]=>
+  string(1) "1"
+}
+Oct 15 00:30:25  [debug] Ssh2Connector::logout: user username logged out.
+
+
+Script finished. Runing time = 55 seconds.
+		</pre>
+	</body>
+</html>
